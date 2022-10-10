@@ -1,4 +1,4 @@
-# Setup you Dockerfile
+# Setup you docker-compose.yml
 Add a new file called 'docker-compose-production.yml', [like this](docker-compose-production.yml). This file runs your docker container, your PosotgreSQL Database and any other container you want to add.
 <br>
 
