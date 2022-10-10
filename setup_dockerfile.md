@@ -7,7 +7,7 @@ FROM ruby:3.1.2-alpine3.16
 ```
 <br>
 
-This makes a folder on the top Level, '/' and calls that Folder 'goclimb'. Later in the file we can reference this folder with a '.'
+This makes a folder on the top Level, '/' and calls that Folder 'goclimb'. Later in the file we can reference this folder with a '.' You can call this whatever you want, for example 'app'
 ```
 WORKDIR /goclimb
 ```
@@ -29,7 +29,7 @@ RUN apk add --update \
 ```
 <br>
 
-Here we copy the files for yarn and bundler into to working directory, aka '/goclimb', and execute yarn install and bundle install
+Here we copy the files for yarn and bundler into to working directory(./), aka '/goclimb', and execute yarn install and bundle install
 ```
 # Application dependencies
 COPY package.json yarn.lock ./

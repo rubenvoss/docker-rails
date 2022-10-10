@@ -60,3 +60,4 @@ This is your volume with the PostgreSQL Database data
 volumes:
   postgres_data:
 ```
+And now you can start your containers with 'docker compose up'.
