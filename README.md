@@ -19,3 +19,6 @@ Using docker in production makes sense pretty much always
     - easy scaling
     - contained environment
     - less setup
+Depending on how your pipeline is set up, you can have your Dockerfile & docker-compose.yml for production on the server or on your Github repo. Here we build the image with Github Actions, so the Dockerfile-production is in the Github repo and the docker-compose.yml file is located on the server.
+## [1. Setup your Dockerfile-production](setup_dockerfile_production.md)
+## [2. Setup your docker-compose.yml file](setup_docker_compose_production.md)
