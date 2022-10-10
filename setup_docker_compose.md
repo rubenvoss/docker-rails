@@ -24,7 +24,8 @@ This is your PostgreSQL DB container
     volumes:
       - postgres_data:/var/lib/postgresql/data
 ```
-
+This is your container that runs puma, the rails server.
+```
   rails_development_server:
     container_name: rails_development_server
     build: .
@@ -36,12 +37,10 @@ This is your PostgreSQL DB container
     # if you change any code in your files, it will be updated in the container
     volumes:
       - ./:/goclimb:rw
-
-    # entrypoint: /goclimb/rails_entrypoint.sh
-
-    # you HAVE to run the command here, otherwise docker container exits with code 0
     command: ["rails", "server", "-b", "0.0.0.0"]
-
+```
+The cool thing about Docker is, that you can add containers easily, such as a management platform for your Database.
+```
   adminer:
     # adminer is a user interface on the web, to display contents of db
     # domain - localhost:8080
@@ -55,6 +54,9 @@ This is your PostgreSQL DB container
     restart: always
     ports:
       - 8080:8080
-
+```
+This is your volume with the PostgreSQL Database data
+```
 volumes:
   postgres_data:
+```
